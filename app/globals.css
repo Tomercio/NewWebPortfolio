@@ -191,6 +191,9 @@
 }
 .footerf {
   border-radius: 15px;
+  margin-top: 20px;
+  font-size: medium;
+  font-family: "Hi Melody", sans-serif;
 }
 .thxmsg {
   font-family: "Courier New", Courier, monospace;
@@ -242,7 +245,10 @@
   .socialicons {
     font-size: 1rem;
     padding: 8px;
-    top: 12%;
+    top: 15%;
+  }
+  .pageoverlay {
+    margin-top: -6rem;
   }
   .aboutme {
     min-height: 115vh;

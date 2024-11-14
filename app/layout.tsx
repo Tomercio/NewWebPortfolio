@@ -44,7 +44,7 @@ export default function RootLayout({
         </div>
 
         <div className="flex justify-center items-center mb-2">
-          <footer className="footerf inline-block text-center font-serif bg-black bg-opacity-25 text-white px-4 py-2">
+          <footer className="footerf inline-block text-center font-serif bg-black bg-opacity-25 text-white px-3 py-1">
             ©️ Tomer Amitai | 2024 All Rights Reserved.
           </footer>
         </div>

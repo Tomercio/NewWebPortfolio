@@ -12,7 +12,6 @@ const Navbar: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
@@ -60,7 +59,7 @@ const Navbar: React.FC = () => {
         <nav
           className={`navl ${
             menuOpen ? "flex" : "hidden md:flex"
-          } flex-col md:flex-row items-center md:items-center absolute md:static right-0 top-16 md:top-auto md:bg-transparent rounded-lg p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6`}
+          } flex-col md:flex-row bg-black bg-opacity-50 items-center md:items-center absolute md:static right-0 top-16 md:top-auto md:bg-transparent rounded-lg p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6`}
           style={{ transformOrigin: "top right" }}
         >
           <Link href="/">
