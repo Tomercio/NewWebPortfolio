@@ -30,8 +30,12 @@ const Navbar: React.FC = () => {
     };
   }, [menuOpen]);
 
-  const closeMenu = () => {
+  const closeMenuAndScrollToTop = () => {
     setMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -64,7 +68,7 @@ const Navbar: React.FC = () => {
         >
           <Link href="/">
             <span
-              onClick={closeMenu}
+              onClick={closeMenuAndScrollToTop}
               className="p-2 hover:bg-emerald-100 hover:bg-opacity-25 rounded cursor-pointer"
             >
               Home
@@ -72,7 +76,7 @@ const Navbar: React.FC = () => {
           </Link>
           <Link href="/about">
             <span
-              onClick={closeMenu}
+              onClick={closeMenuAndScrollToTop}
               className="p-2 hover:bg-emerald-100 hover:bg-opacity-25 rounded cursor-pointer"
             >
               About Me
@@ -80,7 +84,7 @@ const Navbar: React.FC = () => {
           </Link>
           <Link href="/projects">
             <span
-              onClick={closeMenu}
+              onClick={closeMenuAndScrollToTop}
               className="p-2 hover:bg-emerald-100 hover:bg-opacity-25 rounded cursor-pointer"
             >
               Projects
@@ -88,7 +92,7 @@ const Navbar: React.FC = () => {
           </Link>
           <Link href="/contact">
             <span
-              onClick={closeMenu}
+              onClick={closeMenuAndScrollToTop}
               className="p-2 hover:bg-emerald-100 hover:bg-opacity-25 rounded cursor-pointer"
             >
               Contact Me

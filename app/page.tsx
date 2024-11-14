@@ -35,11 +35,18 @@ const HomePage = () => {
           </p>
 
           {/* CTA Button */}
-          <Link href="/about" passHref>
-            <button className="mt-8 px-6 md:px-8 py-2 md:py-3 bg-emerald-400 text-white font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300">
-              More About Me
-            </button>
-          </Link>
+          <div className="wrap flex gap-5">
+            <Link href="/about#top">
+              <button className="mt-8 px-6 md:px-8 py-2 md:py-3 button button-left">
+                About Me
+              </button>
+            </Link>
+            <Link href="/projects#top">
+              <button className="mt-8 px-6 md:px-8 py-2 md:py-3 button button-right">
+                Projects
+              </button>
+            </Link>
+          </div>
         </section>
       </div>
     </main>

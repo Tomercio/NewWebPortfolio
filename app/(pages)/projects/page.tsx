@@ -87,16 +87,15 @@ const Projects = () => {
 
       <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-y-6 lg:max-w-screen-xl px-2">
         {projects.map((project) => (
-          <div
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={project.id}
-            className="bg-black bg-opacity-40 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col justify-between w-full sm:w-72 md:w-80 lg:w-2/5"
+            className="w-full sm:w-72 md:w-80 lg:w-2/5"
           >
-            <div className="flex-grow">
-              <Link
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className="bg-black bg-opacity-40 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col justify-between h-full cursor-pointer">
+              <div className="flex-grow">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
@@ -104,22 +103,21 @@ const Projects = () => {
                   height={160}
                   className="w-full h-40 object-cover rounded-t-lg mb-2"
                 />
-              </Link>
+                <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
+                <p className="text-gray-300 text-sm mb-4">
+                  {project.description}
+                </p>
+              </div>
 
-              <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
-              <p className="text-gray-300 text-sm mb-4">
-                {project.description}
-              </p>
+              <div className="flex space-x-3 text-lg mt-4">
+                {project.technologies.map((tech) => (
+                  <span key={tech.key} className="text-emerald-300">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-
-            <div className="flex space-x-3 text-lg mt-4">
-              {project.technologies.map((tech) => (
-                <span key={tech.key} className="text-emerald-300">
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

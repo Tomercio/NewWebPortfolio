@@ -15,7 +15,7 @@ const AboutMe = () => {
     I fell in love with the frontend, and it became my passion.
     My journey into programming was long and challenging,
     I always wanted it but never had the time to pursue it.
-    This time, I&apos;m not giving up and challenging myself every day with something new.
+    This time, I'm not giving up and challenging myself every day with something new.
     So, if you want to work with me, or just want to say hi, feel free to contact me!`;
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const AboutMe = () => {
           displayText: fullText.slice(0, index + 1),
         }));
         index++;
-        timeoutId = setTimeout(typeText, 40);
+        timeoutId = setTimeout(typeText, 30);
       } else {
         setAnimationState((prev) => ({ ...prev, showButton: true }));
       }
@@ -41,6 +41,13 @@ const AboutMe = () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
   }, [fullText]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <ClientOnly>
@@ -57,7 +64,10 @@ const AboutMe = () => {
 
         {animationState.showButton && (
           <Link href="/contact">
-            <button className="mt-8 px-8 py-3 bg-emerald-400 text-white text-xl font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300">
+            <button
+              onClick={scrollToTop}
+              className="mt-8 px-8 py-3 bg-emerald-400 text-white text-xl font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+            >
               Let&apos;s Chat!
             </button>
           </Link>
