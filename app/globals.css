@@ -293,67 +293,29 @@ html {
 }
 
 .button {
-  min-width: 170px;
+  min-width: 100px;
   min-height: 50px;
   display: inline-flex;
   font-family: "Nunito", sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
+  color: rgb(49, 49, 49);
   background: #34d399;
   background: linear-gradient(90deg, #34d399 0%, #6adab1 100%);
   border: none;
   border-radius: 15px;
-  box-shadow: 6px 6px 12px rgba(79, 209, 197, 0.64);
+  box-shadow: 6px 6px 10px #c2d179;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
   position: relative;
   padding: 10px;
 }
-/* .button-right:hover {
-  transform: rotate3d(-1, -1, -1, 10deg);
-}
-.button-left:hover {
-  transform: rotate3d(1, 1, 1, 10deg);
-}
-
-.button-right:active,
-.button-left:active {
-  transform: scale(0.9) rotate3d(-1, -1, -1, 10deg);
-} */
-/* .button::before {
-  content: "";
-  border-radius: 1000px;
-  min-width: calc(300px + 12px);
-  min-height: calc(60px + 12px);
-  border: 6px solid #00ffcb;
-  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
-} */
-
-/* .button::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  border-radius: 100px;
-  border: 3px solid #00ffcb;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 
 @keyframes float {
   0% {
