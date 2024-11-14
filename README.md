@@ -4,7 +4,7 @@ Welcome to my personal web portfolio! This project showcases my skills, projects
 
 ## 🖥️ Demo
 
-You can check out the live version of the portfolio [here](https://new-web-portfolio-iota.vercel.app/)
+You can check out the live version of the portfolio [here](https://tawebstudio.com)
 
 ## 📋 Features
 
