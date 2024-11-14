@@ -25,7 +25,7 @@ const SocialLinks = () => {
         <FaGithub className="cursor-pointer hover:text-emerald-300 transition-colors duration-300" />
       </a>
       <a
-        href="https://www.wa.me/+972524260338"
+        href="https://api.whatsapp.com/send/?phone=%2B972524260338&text&type=phone_number&app_absent=0"
         aria-label="WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
