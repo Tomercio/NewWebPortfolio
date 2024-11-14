@@ -309,7 +309,7 @@ html {
   background: linear-gradient(90deg, #34d399 0%, #6adab1 100%);
   border: none;
   border-radius: 15px;
-  box-shadow: 6px 6px 10px #c2d179;
+  box-shadow: 6px 6px 6px #ababab;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
