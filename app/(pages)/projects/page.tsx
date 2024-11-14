@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   FaReact,
   FaJsSquare,
@@ -21,12 +22,12 @@ const projects = [
     imageUrl: "/realestate.png",
     link: "https://github.com/TomKondat/next-nest",
     technologies: [
-      <FaReact />,
-      <FaJsSquare />,
-      <FaCss3Alt />,
-      <FaBootstrap />,
-      <FaNodeJs />,
-      <SiMongodb />,
+      <FaReact key="react" />,
+      <FaJsSquare key="js" />,
+      <FaCss3Alt key="css" />,
+      <FaBootstrap key="bootstrap" />,
+      <FaNodeJs key="node" />,
+      <SiMongodb key="mongodb" />,
     ],
   },
   {
@@ -37,11 +38,11 @@ const projects = [
     imageUrl: "/mywebsite.png",
     link: "https://github.com/Tomercio/TA-WebStudio",
     technologies: [
-      <FaReact />,
-      <FaHtml5 />,
-      <FaJsSquare />,
-      <RiNextjsFill />,
-      <RiTailwindCssFill />,
+      <FaReact key="react" />,
+      <FaHtml5 key="html" />,
+      <FaJsSquare key="js" />,
+      <RiNextjsFill key="nextjs" />,
+      <RiTailwindCssFill key="tailwind" />,
     ],
   },
   {
@@ -52,12 +53,12 @@ const projects = [
     imageUrl: "/carsisrael.png",
     link: "https://github.com/Tomercio/CarsTable",
     technologies: [
-      <FaReact />,
-      <FaJsSquare />,
-      <FaCss3Alt />,
-      <FaHtml5 />,
-      <RiTailwindCssFill />,
-      <RiNextjsFill />,
+      <FaReact key="react" />,
+      <FaJsSquare key="js" />,
+      <FaCss3Alt key="css" />,
+      <FaHtml5 key="html" />,
+      <RiTailwindCssFill key="tailwind" />,
+      <RiNextjsFill key="nextjs" />,
     ],
   },
   {
@@ -67,11 +68,11 @@ const projects = [
     imageUrl: "/todolist.png",
     link: "https://github.com/Tomercio/TodoList",
     technologies: [
-      <FaReact />,
-      <FaJsSquare />,
-      <FaHtml5 />,
-      <FaCss3Alt />,
-      <RiTailwindCssFill />,
+      <FaReact key="react" />,
+      <FaJsSquare key="js" />,
+      <FaHtml5 key="html" />,
+      <FaCss3Alt key="css" />,
+      <RiTailwindCssFill key="tailwind" />,
     ],
   },
 ];
@@ -79,48 +80,41 @@ const projects = [
 const Projects = () => {
   return (
     <div className="flex flex-col items-center lg:mt-[-65] justify-center min-h-screen text-white animate-fadeIn px-4 pt-20 sm:pt-28 md:pt-32 lg:pt-20">
-      {/* Social Icons on the Left */}
       <SocialLinks />
-
       <h1 className="text-4xl font-bold mb-10 text-center text-emerald-300">
         My Projects
       </h1>
 
-      {/* Project Cards */}
       <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-y-6 lg:max-w-screen-xl px-2">
         {projects.map((project) => (
           <div
             key={project.id}
             className="bg-black bg-opacity-40 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col justify-between w-full sm:w-72 md:w-80 lg:w-2/5"
           >
-            {/* Main Content */}
             <div className="flex-grow">
-              {/* Project Image */}
               <Link
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
+                  width={320}
+                  height={160}
                   className="w-full h-40 object-cover rounded-t-lg mb-2"
                 />
               </Link>
 
-              {/* Project Title */}
               <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
-
-              {/* Project Description */}
               <p className="text-gray-300 text-sm mb-4">
                 {project.description}
               </p>
             </div>
 
-            {/* Technologies Used */}
             <div className="flex space-x-3 text-lg mt-4">
-              {project.technologies.map((tech, index) => (
-                <span key={index} className="text-emerald-300">
+              {project.technologies.map((tech) => (
+                <span key={tech.key} className="text-emerald-300">
                   {tech}
                 </span>
               ))}

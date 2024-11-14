@@ -29,8 +29,8 @@ const HomePage = () => {
           </p>
 
           <p className="mt-4 max-w-lg text-base text-gray-300 leading-relaxed quote">
-            "Tell me and I forget, teach me and I may remember,
-            <br /> involve me and I learn." <br />
+            &quot;Tell me and I forget, teach me and I may remember,
+            <br /> involve me and I learn.&quot; <br />
             <span className="bf">- Benjamin Franklin</span>
           </p>
 

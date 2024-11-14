@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, MouseEvent } from "react";
 import { useTheme } from "next-themes";
 import {
   Cloud,
@@ -10,7 +10,6 @@ import {
   SimpleIcon,
 } from "react-icon-cloud";
 
-// Cloud properties
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
     style: {
@@ -37,7 +36,6 @@ export const cloudProps: Omit<ICloud, "children"> = {
   },
 };
 
-// Function to render each icon with a shadow based on theme
 export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
   const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
@@ -53,7 +51,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       href: undefined,
       target: undefined,
       rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
+      onClick: (e: MouseEvent<HTMLAnchorElement>) => e.preventDefault(),
     },
   });
 };
@@ -69,9 +67,8 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Set mounted to true on client side
   useEffect(() => {
-    setMounted(true); // Only render after mounting
+    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -81,19 +78,18 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, [iconSlugs, mounted]);
 
   const renderedIcons = useMemo(() => {
-    if (!data) return []; // Ensure this is always an array
+    if (!data) return [];
 
     return Object.values(data.simpleIcons).map((icon) =>
       renderCustomIcon(icon, theme || "light")
     );
   }, [data, theme]);
 
-  // Avoid rendering on the server
   if (!mounted) return null;
 
   return (
     <div suppressHydrationWarning={true}>
-      <Cloud {...cloudProps} children={renderedIcons} />
+      <Cloud {...cloudProps}>{renderedIcons}</Cloud>
     </div>
   );
 }

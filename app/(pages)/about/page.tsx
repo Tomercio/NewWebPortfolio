@@ -10,12 +10,12 @@ const AboutMe = () => {
     showButton: false,
   });
 
-  const fullText = ` Hey guys! My name is Tomer, and I am a Frontend Developer.
+  const fullText = `Hey guys! My name is Tomer, and I am a Frontend Developer.
     I recently finished an intensive and fulfilling Fullstack Bootcamp.
     I fell in love with the frontend, and it became my passion.
     My journey into programming was long and challenging,
     I always wanted it but never had the time to pursue it.
-    This time, I'm not giving up and challenging myself every day with something new.
+    This time, I&apos;m not giving up and challenging myself every day with something new.
     So, if you want to work with me, or just want to say hi, feel free to contact me!`;
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const AboutMe = () => {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [fullText]);
 
   return (
     <ClientOnly>
@@ -58,7 +58,7 @@ const AboutMe = () => {
         {animationState.showButton && (
           <Link href="/contact">
             <button className="mt-8 px-8 py-3 bg-emerald-400 text-white text-xl font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300">
-              Let's Chat!
+              Let&apos;s Chat!
             </button>
           </Link>
         )}

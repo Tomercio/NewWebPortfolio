@@ -33,7 +33,7 @@ const Contact = () => {
       <SocialLinks />
 
       <h2 className="contactheader text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-300">
-        Let's Chat!
+        Let&apos;s Chat!
       </h2>
 
       {submitted ? (
