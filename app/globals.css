@@ -1,21 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Lora:ital,wght@0,400..700;1,400..700&family=Moirai+One&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Kablammo&family=Lora:ital,wght@0,400..700;1,400..700&family=Moirai+One&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  html.dark {
+    --bg-color: linear-gradient(
+      315deg,
+      #1b1e2b 3%,
+      #3c404b 38%,
+      #1b1e2b 68%,
+      #3c404b 98%
+    );
+    --text-color: #ffffff;
+  }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradient 15s ease infinite;
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+.mpage {
+  margin-top: 12rem;
+}
+.icloud {
+  box-shadow: 0 4px 8px rgb(156, 243, 209);
+}
+.socialicons {
+  left: 0;
+  top: 48%;
+  background-color: rgba(46, 46, 46, 0.523);
+  padding: 10px;
+  position: fixed;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: 3px;
+  border-radius: 18px;
+  position: fixed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navbarh {
+  font-family: "Moirai One", system-ui;
+  background-color: rgba(46, 46, 46, 0.523);
+  border-radius: 12px;
+}
+.navl {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.quote {
+  font-family: "Hi Melody", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+
+.bf {
+  font-size: 1.5rem;
+}
+.pageoverlay {
+  border-radius: 90px;
+}
+.aboutme {
+  font-family: "Hi Melody", sans-serif;
+  border-radius: 12px;
+  height: 60vh;
+  margin-top: 140px;
+}
+.cardd {
+  height: 10vh;
+}
+.allcard {
+  margin-bottom: 80px;
+}
+/* Contact*/
+
+.contactbox {
+  margin-top: 5%;
+  padding: 10px;
+}
+
+.formbox {
+  background-color: rgba(20, 20, 20, 0.205);
+}
+.formbtn {
+  position: relative;
+  border: 2px solid #33c297;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.formbtn:hover {
+  background-color: #33c297;
+}
+.contactheader {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.cardimg {
+  height: 300px;
+  width: 100%;
+}
+.allcard {
+  margin-top: 80px;
+}
+
+/* Wave Styling */
+.wave {
+  background: rgba(255, 255, 255, 0.25); /* Static color for waves */
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+.footerf {
+  border-radius: 15px;
+}
+.thxmsg {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@media (max-width: 768px) {
+  .contactbox {
+    padding: 2rem;
+    margin-top: 140px;
+  }
+  .formbox {
+    padding: 1.5rem;
+  }
+  .contactheader {
+    font-size: 2rem;
+  }
+  .socialicons {
+    font-size: 1rem;
+    padding: 8px;
+    top: 12%;
+  }
+  .aboutme {
+    min-height: 115vh;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    transform: translateX(0);
+    position: relative;
+  }
+  .cardss {
+    margin-top: -4rem;
+  }
+  .socialicons {
+    margin-top: -13rem;
+  }
+}
+@layer base {
+  * {
+    border: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
 }
