@@ -36,7 +36,7 @@ const projects = [
     description:
       "Welcome to my web profile portfolio! This project showcases my personal and professional journey, skills, and work. It serves as a digital resume and a platform to connect with potential employers, clients, and collaborators.",
     imageUrl: "/mywebsite.png",
-    link: "https://github.com/Tomercio/TA-WebStudio",
+    link: "https://github.com/Tomercio/NewWebPortfolio",
     technologies: [
       <FaReact key="react" />,
       <FaHtml5 key="html" />,
