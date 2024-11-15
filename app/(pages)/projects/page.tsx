@@ -83,9 +83,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col items-center lg:mt-[-35] justify-center min-h-screen text-white animate-fadeIn px-4 pt-20 sm:pt-28 md:pt-32 lg:pt-20">
       <SocialLinks />
-      <h1 className="mypro text-center text-emerald-300">
-        My Projects & Skills
-      </h1>
+      <h1 className="mypro text-center text-emerald-300">My Projects</h1>
 
       <div className="card flex flex-col lg:flex-row lg:justify-center lg:gap-8 gap-y-6 lg:max-w-screen-xl px-2">
         {projects.map((project) => (
