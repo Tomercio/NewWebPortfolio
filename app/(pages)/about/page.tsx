@@ -64,10 +64,7 @@ const AboutMe = () => {
 
         {animationState.showButton && (
           <Link href="/contact">
-            <button
-              onClick={scrollToTop}
-              className="mt-8 px-8 py-3 bg-emerald-400 text-white text-xl font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
-            >
+            <button onClick={scrollToTop} className="button mt-8 px-8 py-3">
               Let&apos;s Chat!
             </button>
           </Link>

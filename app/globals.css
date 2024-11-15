@@ -126,9 +126,10 @@ html {
   height: 70vh;
   margin-top: 140px;
 }
-.cardd {
-  height: 10vh;
+.tomer {
+  animation: skewIn 1.8s ease;
 }
+
 .allcard {
   margin-bottom: 80px;
 }
@@ -137,23 +138,14 @@ html {
 .contactbox {
   margin-top: 5%;
   padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(20, 20, 20, 0.205);
 }
 
 .formbox {
-  background-color: rgba(20, 20, 20, 0.205);
-}
-.formbtn {
-  position: relative;
-  border: 2px solid #33c297;
-  cursor: pointer;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  z-index: 1;
+  border-radius: 15px;
 }
 
-.formbtn:hover {
-  background-color: #33c297;
-}
 .contactheader {
   font-family: "Courier New", Courier, monospace;
 }
@@ -237,7 +229,7 @@ html {
 @media (max-width: 768px) {
   .contactbox {
     padding: 2rem;
-    margin-top: 140px;
+    margin-top: 100px;
   }
   .formbox {
     padding: 1.5rem;
@@ -329,7 +321,20 @@ html {
   }
 }
 
-.button-right,
-.button-left {
+@keyframes skewIn {
+  from {
+    transform: skewX(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: skewX(0);
+    opacity: 1;
+  }
+}
+.button {
   animation: float 3s ease-in-out infinite;
+}
+.card {
+  animation: float 3s ease-in-out infinite;
+  transition: all 0.3s ease-in-out 0s;
 }

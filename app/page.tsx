@@ -16,7 +16,7 @@ const HomePage = () => {
             <IconCloudDemo />
           </div>
 
-          <h1 className="mt-6 text-3xl md:text-5xl font-extrabold text-gray-200">
+          <h1 className="tomer mt-6 text-3xl md:text-5xl font-extrabold text-gray-200">
             Hey, It&apos;s <span className="text-emerald-400">Tomer</span>
           </h1>
           <h2 className="mt-2 text-xl md:text-2xl font-semibold text-gray-400">

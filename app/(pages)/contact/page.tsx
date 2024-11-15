@@ -27,6 +27,8 @@ const Contact = () => {
     }
   };
 
+  const closeModal = () => setSubmitted(false);
+
   return (
     <div className="contactbox flex flex-col items-center justify-center px-4 py-12 md:py-20 relative z-10 animate-fadeIn">
       {/* Social Icons on the Left */}
@@ -36,52 +38,63 @@ const Contact = () => {
         Let&apos;s Chat!
       </h2>
 
-      {submitted ? (
-        <p className="thxmsg text-white text-center bg-black p-5 bg-opacity-25">
-          Thank you! Your message has been sent.
-        </p>
-      ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="formbox w-full max-w-lg p-6 md:p-8 rounded-lg shadow-xl text-black bg-opacity-80"
-        >
-          <div className="mb-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300"
-              required
-            />
-          </div>
-          <div className="mb-6">
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows={4}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300 resize-none"
-              required
-            ></textarea>
-          </div>
-          <div className="flex justify-center">
+      {submitted && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-6 shadow-lg max-w-md text-center">
+            <h3 className="text-xl font-semibold mb-4">
+              Thank you for Submitting !
+            </h3>
+            <p>Will be in touch soon</p>
             <button
-              type="submit"
-              className="formbtn flex justify-center text-white font-semibold px-6 py-2 rounded-md bg-emerald-400 hover:bg-emerald-500 transition duration-200"
+              onClick={closeModal}
+              className="mt-4 px-4 py-2 bg-emerald-300 text-white rounded-lg focus:outline-none"
             >
-              Submit
+              Close
             </button>
           </div>
-        </form>
+        </div>
       )}
+
+      <form
+        onSubmit={handleSubmit}
+        className="formbox w-full max-w-lg p-6 md:p-8 rounded-lg shadow-xl text-black"
+      >
+        <div className="mb-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300"
+            required
+          />
+        </div>
+        <div className="mb-6">
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={4}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-300 resize-none"
+            required
+          ></textarea>
+        </div>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="button flex justify-center px-6 py-2"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

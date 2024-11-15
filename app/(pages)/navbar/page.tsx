@@ -61,10 +61,23 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links with .navl styling for Desktop and Dropdown for Mobile */}
         <nav
-          className={`navl ${
-            menuOpen ? "flex" : "hidden md:flex"
-          } flex-col md:flex-row bg-black bg-opacity-50 items-center md:items-center absolute md:static right-0 top-16 md:top-auto md:bg-transparent rounded-lg p-4 md:p-0 space-y-4 md:space-y-0 md:space-x-6`}
-          style={{ transformOrigin: "top right" }}
+          className={`navl
+              fixed md:static right-1 md:right-auto top-20 md:top-auto
+              w-48 md:w-auto rounded-bl-[25px] rounded-tr-[25px]
+              flex flex-col md:flex-row
+              items-center md:items-center
+              bg-black/50 md:bg-transparent
+              backdrop-blur-md md:backdrop-blur-none md:rounded-none
+              p-4 md:p-0
+              space-y-4 md:space-y-0 md:space-x-6
+              transform origin-top-right
+              transition-all duration-300 ease-in-out
+              ${
+                menuOpen
+                  ? "opacity-100 scale-100 translate-y-0"
+                  : "opacity-0 scale-95 -translate-y-4 pointer-events-none md:opacity-100 md:scale-100 md:translate-y-0 md:pointer-events-auto"
+              }
+            `}
         >
           <Link href="/">
             <span
