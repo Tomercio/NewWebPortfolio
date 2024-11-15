@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import SocialLinks from "./(pages)/socialinks/page";
+import SocialLinks from "../components/socialinks/page";
 import { IconCloudDemo } from "../components/ui/IconCloudDemo";
 
 const HomePage = () => {
@@ -43,7 +43,7 @@ const HomePage = () => {
             </Link>
             <Link href="/projects#top">
               <button className="mt-8 px-6 md:px-8 py-2 md:py-3 button button-right">
-                Projects
+                Pro&Skills
               </button>
             </Link>
           </div>

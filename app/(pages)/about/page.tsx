@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import SocialLinks from "../socialinks/page";
+import SocialLinks from "../../../components/socialinks/page";
 import ClientOnly from "../../../components/ClientsOnly";
 
 const AboutMe = () => {

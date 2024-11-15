@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import SocialLinks from "../socialinks/page";
+import SocialLinks from "../../../components/socialinks/page";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -56,7 +56,7 @@ const Contact = () => {
         className="formbox w-full max-w-lg p-6 md:p-8 rounded-lg shadow-xl text-black"
       >
         <div className="mb-4">
-          <h2 className="contactheader text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-300">
+          <h2 className="contactheader text-4xl md:text-5xl mb-6 text-center text-emerald-300">
             Let&apos;s Chat!
           </h2>
 
