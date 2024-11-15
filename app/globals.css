@@ -356,7 +356,7 @@ html {
     border-radius: 85px;
   }
   .skills {
-    width: 80vw;
+    width: 75vw;
     display: flex;
     flex-direction: column;
   }
