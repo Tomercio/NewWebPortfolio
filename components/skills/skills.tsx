@@ -18,11 +18,11 @@ import {
 
 const SkillsCard = () => {
   const skills = [
-    { icon: <FaReact />, name: "React" },
+    { icon: <FaHtml5 />, name: "HTML" },
+    { icon: <FaCss3 />, name: "CSS" },
     { icon: <IoLogoJavascript />, name: "JavaScript" },
+    { icon: <FaReact />, name: "React" },
     { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <FaHtml5 />, name: "HTML5" },
-    { icon: <FaCss3 />, name: "CSS3" },
     { icon: <FaNodeJs />, name: "Node.js" },
     { icon: <SiMongodb />, name: "MongoDB" },
     { icon: <SiNextdotjs />, name: "Next.js" },
@@ -44,7 +44,7 @@ const SkillsCard = () => {
             <div className="skillsi text-4xl mb-2 cursor-pointer">
               {skill.icon}
             </div>
-            <p className="text-sm">{skill.name}</p>
+            <p className="skilln text-sm">{skill.name}</p>
           </div>
         ))}
       </div>
