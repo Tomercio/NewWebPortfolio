@@ -34,10 +34,6 @@ const Contact = () => {
       {/* Social Icons on the Left */}
       <SocialLinks />
 
-      <h2 className="contactheader text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-300">
-        Let&apos;s Chat!
-      </h2>
-
       {submitted && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-6 shadow-lg max-w-md text-center">
@@ -60,6 +56,10 @@ const Contact = () => {
         className="formbox w-full max-w-lg p-6 md:p-8 rounded-lg shadow-xl text-black"
       >
         <div className="mb-4">
+          <h2 className="contactheader text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-300">
+            Let&apos;s Chat!
+          </h2>
+
           <input
             type="text"
             name="name"

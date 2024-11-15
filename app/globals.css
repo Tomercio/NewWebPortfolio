@@ -139,15 +139,16 @@ html {
   margin-top: 5%;
   padding: 10px;
   border-radius: 15px;
-  background-color: rgba(20, 20, 20, 0.205);
 }
 
 .formbox {
   border-radius: 15px;
+  background-color: rgba(20, 20, 20, 0.205);
 }
 
 .contactheader {
   font-family: "Courier New", Courier, monospace;
+  margin-bottom: 50px;
 }
 
 .cardimg {
@@ -236,6 +237,7 @@ html {
   }
   .contactheader {
     font-size: 2rem;
+    margin-bottom: 30px;
   }
   .socialicons {
     font-size: 1rem;
@@ -253,6 +255,11 @@ html {
     background-attachment: fixed;
     padding-bottom: 4rem;
     margin-top: 100px;
+  }
+  .icloud {
+    width: 58vw;
+    height: 20vh;
+    border-radius: 85px;
   }
 }
 @media (min-width: 1024px) {
@@ -333,8 +340,4 @@ html {
 }
 .button {
   animation: float 3s ease-in-out infinite;
-}
-.card {
-  animation: float 3s ease-in-out infinite;
-  transition: all 0.3s ease-in-out 0s;
 }
