@@ -196,7 +196,7 @@ html {
 .footerf {
   border-radius: 15px;
   margin-top: 20px;
-  font-size: medium;
+  font-size: small;
   font-family: "Courier New", Courier, monospace;
 }
 .thxmsg {
@@ -370,7 +370,9 @@ html {
   .mypro {
     font-size: 2rem;
   }
-
+  .footerf {
+    font-size: x-small;
+  }
   @media (min-width: 1024px) {
     .sidebar {
       transform: translateX(0);
