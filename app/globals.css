@@ -319,7 +319,7 @@ html {
 }
 
 .skillsi {
-  animation: spin360 5s linear infinite; /* 5s for slow spin */
+  animation: spin360 5s linear infinite;
 }
 @media (max-width: 768px) {
   .contactbox {
@@ -373,6 +373,10 @@ html {
   .footerf {
     font-size: x-small;
   }
+  .tomer {
+    font-size: 1.5rem;
+  }
+
   @media (min-width: 1024px) {
     .sidebar {
       transform: translateX(0);
