@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Download } from "lucide-react";
 import {
   FaReact,
   FaJsSquare,
@@ -123,6 +125,29 @@ const Projects = () => {
         ))}
       </div>
       <SkillsCard />
+      <button
+        onClick={async () => {
+          try {
+            const response = await fetch("/TomerTechCV.pdf");
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", "TomerTechCV.pdf");
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(url);
+          } catch (error) {
+            console.error("Error downloading resume:", error);
+            alert("Failed to download resume. Please try again.");
+          }
+        }}
+        className="button flex justify-center px-6 py-2 mt-12"
+      >
+        <Download size={16} className="mr-2" />
+        Download My Resume
+      </button>
     </div>
   );
 };
