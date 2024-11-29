@@ -145,8 +145,8 @@ const Projects = () => {
         }}
         className="button flex justify-center px-6 py-2 mt-12"
       >
-        <Download size={16} className="mr-2" />
         Download My Resume
+        <Download size={16} className="ml-2" />
       </button>
     </div>
   );
